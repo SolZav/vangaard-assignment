@@ -1,0 +1,515 @@
+/* CSS BY Sol Llinas */
+
+/* IMPORTED FONTS*/
+/* IMPORT "INTER" FROM GOOGLE FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ROOT VARIABLES */
+:root {
+    --blue: #007BFF;
+    --red: #FF4500;
+    --white: #EAEAEA;
+    --black: #000000;
+    --charcoal: #333333;
+    --font: "Inter", sans-serif;
+}
+
+/* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+
+/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+
+
+body{
+    min-width: 400px;
+    margin: 0 auto;
+    font-family: var(--font);
+}
+
+header{
+    background-color: var(--black);
+    color: var(--blue);
+    padding: 2px;
+   
+}
+
+header div{
+    border-bottom: 2px solidvar(--white) ;
+    box-shadow: 0px 20px 20px -15px var(--blue);
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2px;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    position: relative;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+    padding-left: 1.5rem;
+}
+
+#we-offer h3{
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem 0 0 1rem;
+    line-height: 1.5rem;
+}
+
+p{
+    padding: 1rem 0.5rem;
+    line-height: 1.2rem;
+}
+
+@media screen and (max-width:799px){
+    nav ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        text-align: right; 
+        max-height: 0;
+        
+    }
+
+    nav h2{
+        visibility: hidden;
+        height: 1px;
+    }
+
+    nav li a{
+        display: inline-block;
+        padding: 1rem;
+        text-transform: uppercase;
+        color: var(--blue);
+        background-color: var(--black);
+        font-size: 1.5rem; 
+        font-weight: bold;
+        transition: background-color .3s ease-in;
+        text-decoration: none;
+    }
+
+    nav a:hover, nav input:hover {
+        background-color: var(--blue);
+        color: var(--black);
+    }
+
+    nav label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 1.5rem;
+        user-select: none;
+    }
+
+    label span {
+        background-color: var(--white);
+        display: block;
+        height: .25rem;
+        position: absolute;
+        left: 90%;
+        top: 5%;
+        transition: background-color .3s ease-out;
+        width: 2rem;
+    }
+
+    label span:before, label span:after{
+        background: var(--white);
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+    label span:before {
+        top: .75rem;
+    }
+    label span:after {
+        top: -.75rem;
+    }
+
+    nav input{
+        display: none;
+    }
+
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+}
+
+.main-sections{
+    padding-top: 2rem;
+}
+
+#innovation{
+    color: var(--white);
+    text-align: center;
+}
+
+h2, h3, #consultation{
+    animation: drop 2s ease-in-out; 
+}
+
+@keyframes drop{
+    0% {transform: scale(1,0);}
+    25%{transform: scale(1,1); transform: translate(0px, -10px); }
+    50% {transform: translate(0px, -3px);}
+    100% {transform: translate(0px, 0px);}
+}
+
+
+.offers{
+    background-color: var(--blue);
+    color: var(--white);
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
+    border-radius: 6px;
+    transition: transform 0.7s ease-in-out;
+}
+
+.offers:hover{
+    transform: translate(0px, -10px);
+}
+
+#our-results{
+    background-color: var(--blue);
+    color: var(--white);
+    padding-bottom: 1rem;
+}
+
+#results h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    padding: 1.5rem;
+}
+
+table{ 
+    background-color: var(--black);
+    margin: 0 auto;
+}
+
+tr:nth-child(even){
+    background-color: var(--charcoal);
+}
+
+td, th {
+    border: 1px solid var(--charcoal);
+    padding: 1rem;
+    text-align: center;
+}
+
+#contact-us{
+    background-color: var(--black);
+    color: var(--white);
+    padding-bottom: 1.5rem;
+}
+
+input, label, textarea{
+    display: block;
+    width: 90%;   
+}
+
+input, textarea{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 3px solid var(--blue);
+}
+
+.button{
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: transform 0.5s ease-in-out;
+}
+
+#submit{
+    width: 95%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.button:hover{
+    transform: scale(1.05, 1.10);
+    background-color: var(--red);
+    border: var(--red);
+}
+
+#consultation{
+    width: 60%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+footer{
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+
+footer a{
+    color: var(--blue);
+}
+
+footer p{
+    padding: 0.2rem;
+}
+
+/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
+#innovation {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+
+h1:before {
+    content: "";
+    position: absolute;
+    left:-.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    animation: move 7s linear 1s infinite;
+}
+
+@keyframes move{
+    0% {left: 0px; top: 10px;}
+    25% {left: 0px; top:18px;}
+    50% { left: 0px; top:24px;}
+    75% {left: 0px; top:18px;}
+    100% {left: 0px; top: 10px;}
+}
+
+/* THIS ONE IS DONE FOR YOU */
+#bar-chart {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 1rem;
+    height: 300px;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    position: relative;
+}
+/* ADD ON TRANSITION ON HEIGHT */
+.bar {
+    width: 50px;
+    background: var(--charcoal);
+    border-radius: 10px;
+    position: relative;
+    transition: height 2s;
+    height: 0;
+}
+/* THIS ONE IS DONE FOR YOU */
+.bar::after {
+    content: attr(data-year);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--white);
+}
+@keyframes stepUp {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: var(--height);
+    }
+}
+/* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
+.bar {
+    animation: stepUp 1s ease-in-out forwards;
+}
+
+
+
+/* MEDIA QUERIES (MEDIUM) */ 
+
+@media screen and (min-width:800px){
+    
+    header div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1.5rem;
+    }
+
+    nav ul{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    nav h2, nav input{
+        visibility: hidden;
+        height: 1px;
+    }
+
+    nav li a{
+        display: inline-block;
+        padding: 1rem;
+        text-transform: uppercase;
+        color: var(--blue);
+        background-color: var(--black);
+        font-size: 1.5rem; 
+        font-weight: bold;
+        transition: background-color .3s ease-in;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background-color: var(--blue);
+        color: var(--black);
+    }
+
+    #we-offer div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr;
+        padding-bottom: 2rem;
+    }
+
+    #we-offer h2 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    #results {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #our-results h2{
+        grid-column: 1/3;
+    }
+
+    #our-results p{
+        grid-column: 1/3;
+    }
+    .results-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .results-table {
+        width: 50%;
+    }
+    .bar-chart {
+        width: 50%;
+    }
+
+}
+/* MEDIA QUERIES (LARGE) */
+
+@media screen and (min-width:1024px){
+
+    #we-offer div{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 0.8fr 1fr;
+        gap: 0.2rem;
+    }
+
+    #we-offer h2{
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    .results-table {
+        width: 100%;
+    }
+    .bar-chart {
+        width: 100%;
+    }   
+
+    #contact-us form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    form label, form input{
+        width: 90%;
+    }
+
+    #item1, #item3, #item5{
+        grid-column: 1/2;
+    }
+
+    #item2, #item4, #item6{
+        grid-column: 2/3;
+    }
+}
