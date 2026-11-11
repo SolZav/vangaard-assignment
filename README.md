@@ -1,4 +1,6 @@
-<img width="223" height="136" alt="Stacked RGB" src="https://github.com/user-attachments/assets/946b6917-0c99-429b-964b-6ae1545f5d75" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 300 250">
+<img width="180" height="150" alt="logo" src="https://github.com/user-attachments/assets/03ab7db8-1274-4ac2-af69-07911670f1eb" />
 
 # Enhancing styles with transitions
 
